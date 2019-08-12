@@ -1,4 +1,4 @@
-class CreatePartipations < ActiveRecord::Migration[5.2]
+class CreateParticipations < ActiveRecord::Migration[5.2]
   def change
     create_table :partipations do |t|
       t.string :stripe_customer_id
