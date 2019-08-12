@@ -5,6 +5,6 @@ class Event < ApplicationRecord
     	validates :price, presence: true
     	validates :location, presence: true
 
-    	has_many :user, through: :participation
+    	has_many :users, through: :participations
     	has_many :participations
 end

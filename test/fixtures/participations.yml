@@ -2,6 +2,8 @@
 
 one:
   stripe_customer_id: MyString
+  string: MyString
 
 two:
   stripe_customer_id: MyString
+  string: MyString

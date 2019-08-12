@@ -5,6 +5,6 @@ class Participation < ApplicationRecord
 	after_create :participation_send
 
 	def participation_send
-		ParticipationMailer.participation_send(self).deliver_now
+		ParticipationMailer.new_participation(self).deliver_now
 	end
 end
