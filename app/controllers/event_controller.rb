@@ -9,7 +9,7 @@ class EventController < ApplicationController
   end
 
   def create
-  	
+
   	@event = Event.create(start_date: params[:start_date], duration: params[:duration], title: params[:title],
      description: params[:description], price: params[:price], location: params[:location])
 
@@ -17,9 +17,12 @@ class EventController < ApplicationController
   		redirect_to root_path
   	else 
   		render new_event_path
-  	end 
-
+  	end
   end 
+
+  def destroy
+  	
+  end
 
 
 end

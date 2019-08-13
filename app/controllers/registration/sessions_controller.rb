@@ -24,4 +24,9 @@ class Registration::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+
+  def destroy
+    @user = User.find(params[:id])
+    redirect_to root_path
+  end
 end
