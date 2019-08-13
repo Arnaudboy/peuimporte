@@ -59,6 +59,9 @@ class Registration::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+    after_create :welcome_send
+
+ 
   def new
     @user = User.new
   end
@@ -71,6 +74,10 @@ class Registration::RegistrationsController < Devise::RegistrationsController
       else
         render "new"
       end     
+  end
+
+   def welcome_send
+    UserMailer.welcome_email(self).deliver_now
   end
 
   private
