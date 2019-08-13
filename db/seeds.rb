@@ -12,3 +12,7 @@ User.destroy_all
 20.times do |index|
 	User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.sentence(word_count: 23), email: "nom#{index}@yopmail.com")
 end
+
+20.times do 
+	Event.create(start_date: "2019-12-25", duration: 30, title: Faker::Lorem.sentence(word_count: 5), description: Faker::Lorem.sentence(word_count: 25), price: Faker::Number.between(from: 2, to: 100), location: Faker::Nation.capital_city)
+end 
