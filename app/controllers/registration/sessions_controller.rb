@@ -26,7 +26,6 @@ class Registration::SessionsController < Devise::SessionsController
   # end
 
   def destroy
-    @user = User.find(params[:id])
     redirect_to root_path
   end
 end
