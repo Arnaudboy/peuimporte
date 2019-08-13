@@ -59,7 +59,7 @@ class Registration::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-    after_create :welcome_send
+    after_action :welcome_send
 
  
   def new
